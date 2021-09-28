@@ -30,7 +30,7 @@ namespace Conversor.de.Moeda
             Console.WriteLine("Valor convertido: "+valorConvertido.ToString("F2", CI)); 
 
 
-            //Terceira atualização feita com sucesso.
+            //para atualizar >terminal>git add . > git commit -m "mensagem" > git push 
 
 
 
