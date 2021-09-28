@@ -1,0 +1,52 @@
+[33mcommit 99e48209f0ecea3323eb7c44a649c53790b20e08[m
+Author: Rômulo Queiroz <rfcontatosvia@gmail.com>
+Date:   Tue Sep 28 11:09:04 2021 -0300
+
+    Primeira Versão
+
+[1mdiff --git a/Program.cs b/Program.cs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f2127ac[m
+[1m--- /dev/null[m
+[1m+++ b/Program.cs[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32m﻿using System;[m
+[32m+[m[32musing System.Globalization;[m
+[32m+[m
+[32m+[m[32mnamespace Conversor.de.Moeda[m
+[32m+[m[32m{[m
+[32m+[m[32m    class Program[m
+[32m+[m[32m    {[m
+[32m+[m[32m        static void Main(string[] args)[m
+[32m+[m[32m        {[m
+[32m+[m[32m            CultureInfo CI = CultureInfo.InvariantCulture;[m
+[32m+[m[32m            double valor, valorConvertido;[m
+[32m+[m[32m            int opcao;[m
+[32m+[m[41m            [m
+[32m+[m
+[32m+[m[32m            Console.WriteLine("Digite o valor a ser convertido; ");[m
+[32m+[m[32m            valor = double.Parse(Console.ReadLine());[m
+[32m+[m
+[32m+[m[32m            Console.WriteLine("Opcao 1 -Converter de real para dola, Opcao 2-Converter de dolar para real");[m
+[32m+[m[32m            opcao = int.Parse(Console.ReadLine());[m
+[32m+[m[41m           [m
+[32m+[m[32m            if(opcao <= 1)[m
+[32m+[m[32m            {[m
+[32m+[m[32m                valorConvertido =valor / 5.39;[m
+[32m+[m[32m            }[m
+[32m+[m[32m            else[m
+[32m+[m[32m            {[m
+[32m+[m[32m                valorConvertido = valor * 5.39 ;[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            Console.WriteLine("Valor convertido: "+valorConvertido.ToString("F2", CI));[m[41m [m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m

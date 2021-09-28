@@ -30,7 +30,7 @@ namespace Conversor.de.Moeda
             Console.WriteLine("Valor convertido: "+valorConvertido.ToString("F2", CI)); 
 
 
-            //simulando alteração com erro
+            //agora foi
 
 
 
