@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Globalization;
+ 
 
-namespace Conversor.de.Moeda
+namespace Segunda_versao
 {
     class Program
     {
@@ -11,21 +12,37 @@ namespace Conversor.de.Moeda
             double valor, valorConvertido;
             int opcao;
 
+            Console.WriteLine("BEM VINDO!");
 
-            Console.WriteLine("Digite o valor a ser convertido; ");
-            valor = double.Parse(Console.ReadLine());
+            Console.WriteLine("Opcao 1- Dolar to Real");
+            Console.WriteLine("Opcao 2-Real to Dolar");
+            Console.WriteLine("Opcao 3-Real to Libra");
+            Console.WriteLine("Opcao 4-Libra to Real");
+            Console.WriteLine("Qual opção voce Deseja?");
+            opcao =int.Parse(Console.ReadLine());
+            Console.WriteLine("Qual valor?");
+            valor = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Opcao 1 -Converter de real para dola, Opcao 2-Converter de dolar para real");
-            opcao = int.Parse(Console.ReadLine());
-
-            if (opcao <= 1)
-            {
-                valorConvertido = valor / 5.39;
-            }
-            else
+            if (opcao==1)
             {
                 valorConvertido = valor * 5.39;
+                Console.WriteLine("Valor convertido :  "+valorConvertido.ToString("F2")+" Reais");
             }
-
-            Console.WriteLine("Valor convertido: " + valorConvertido.ToString("F2", CI));
-            //Esse será a segunda Versão
+            else if (opcao == 2)
+            {
+                valorConvertido = valor / 5.39;
+                Console.WriteLine("Valor convertido :  " + valorConvertido.ToString("F2") + " Dolares");
+            }
+            if (opcao == 3)
+            {
+                valorConvertido = valor / 7.36;
+                Console.WriteLine("Valor convertido :  " + valorConvertido.ToString("F2") + " Libras");
+            }
+            else if (opcao == 4)
+            {
+                valorConvertido = valor * 7.36;
+                Console.WriteLine("Valor convertido :  " + valorConvertido.ToString("F2") + " Reais");
+            }
+        }
+    }
+}
